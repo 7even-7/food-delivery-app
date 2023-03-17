@@ -1,0 +1,14 @@
+.banner{
+    height: 80%;
+    width: 100%;
+}
+
+.intro{
+    text-align: center;
+    justify-content: center;
+    
+}
+.intro a{
+    font-family:cursive;
+    font-size: large;
+}

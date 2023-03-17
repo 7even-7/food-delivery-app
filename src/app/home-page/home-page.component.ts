@@ -1,6 +1,6 @@
 import { Component, OnInit } from '@angular/core';
 import { PredictionEvent } from '../prediction-event';
-
+import { Router } from '@angular/router';
 @Component({
   selector: 'app-home-page',
   templateUrl: './home-page.component.html',
@@ -8,7 +8,9 @@ import { PredictionEvent } from '../prediction-event';
 })
 export class HomePageComponent implements OnInit {
   gesture: String = "";
-  constructor() { }
+  private currSlideIndex:number = 0;
+  private images = []
+  constructor(private router:Router) { }
 
   ngOnInit(): void {
   }
@@ -16,5 +18,11 @@ export class HomePageComponent implements OnInit {
   prediction(event: PredictionEvent){
     this.gesture = event.getPrediction();
   }
+  linkToMenu(){
+    this.router.navigate(['menu']);
+  }
+ 
+
+
 
 }
