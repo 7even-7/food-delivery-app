@@ -1,0 +1,38 @@
+.ti{
+    padding-top: 15px;
+    position: relative;
+    margin: auto;
+    text-align: center; 
+    color: red;
+    font-style: bold;
+    font-family: fantasy;
+    
+}
+
+
+.slide-container{
+    padding-top: 15px;
+    position: relative;
+    margin: auto;
+    text-align: center;
+    display: flex;
+    justify-content: center;
+    gap: 30px;
+
+}
+
+.slide-container2{
+    padding-top: 15px;
+    position: relative;
+    margin: auto;
+    text-align: center;
+    display: flex;
+    justify-content: center;
+    gap: 30px;
+
+}
+
+.slide1{
+    width: 270px;
+    height: 300px;
+}

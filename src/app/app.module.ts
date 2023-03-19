@@ -14,7 +14,7 @@ import { MatButtonModule} from '@angular/material/button';
 import { NavbarComponent } from './navbar/navbar.component';
 import {MatIconModule} from '@angular/material/icon';
 import { SlideShowComponent } from './slide-show/slide-show.component';
-
+import { ProductComponent } from './product/product.component';
 @NgModule({
   declarations: [
     AppComponent,
@@ -24,7 +24,8 @@ import { SlideShowComponent } from './slide-show/slide-show.component';
     FoodComponent,
     CheckoutComponent,
     NavbarComponent,
-    SlideShowComponent
+    SlideShowComponent,
+    ProductComponent
 
   ],
   imports: [
@@ -34,6 +35,7 @@ import { SlideShowComponent } from './slide-show/slide-show.component';
     MatToolbarModule,
     MatButtonModule,
     MatIconModule,
+    BrowserAnimationsModule,
 
   ],
   providers: [],
