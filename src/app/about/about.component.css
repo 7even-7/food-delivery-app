@@ -1,0 +1,23 @@
+.banner img{
+    height: 500px;
+    width: 100%;
+    
+}
+
+.intro {
+    justify-content: center;
+    text-align: center;
+   
+
+}
+
+.intro h1{
+    font-family: fantasy;
+    color: red;
+
+}
+
+.intro p{
+    font-family:  fantasy;
+    color: rgb(228, 155, 59);
+}

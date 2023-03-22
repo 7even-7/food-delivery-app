@@ -1,20 +1,18 @@
 import { ComponentFixture, TestBed } from '@angular/core/testing';
 
-import { UiComponent } from './ui.component';
+import { GestureComponent } from './gesture.component';
 
-describe('UiComponent', () => {
-  let component: UiComponent;
-  let fixture: ComponentFixture<UiComponent>;
+describe('GestureComponent', () => {
+  let component: GestureComponent;
+  let fixture: ComponentFixture<GestureComponent>;
 
   beforeEach(async () => {
     await TestBed.configureTestingModule({
-      declarations: [ UiComponent ]
+      declarations: [ GestureComponent ]
     })
     .compileComponents();
-  });
 
-  beforeEach(() => {
-    fixture = TestBed.createComponent(UiComponent);
+    fixture = TestBed.createComponent(GestureComponent);
     component = fixture.componentInstance;
     fixture.detectChanges();
   });

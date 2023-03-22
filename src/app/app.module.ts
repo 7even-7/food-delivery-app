@@ -12,9 +12,12 @@ import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
 import { MatToolbarModule} from '@angular/material/toolbar';
 import { MatButtonModule} from '@angular/material/button';
 import { NavbarComponent } from './navbar/navbar.component';
-import {MatIconModule} from '@angular/material/icon';
+import { MatIconModule } from '@angular/material/icon';
 import { SlideShowComponent } from './slide-show/slide-show.component';
 import { ProductComponent } from './product/product.component';
+import { GestureComponent } from './gesture/gesture.component';
+import { AboutComponent } from './about/about.component';
+//import { AppNavbarComponent } from './app-navbar/app-navbar.component';
 @NgModule({
   declarations: [
     AppComponent,
@@ -25,7 +28,10 @@ import { ProductComponent } from './product/product.component';
     CheckoutComponent,
     NavbarComponent,
     SlideShowComponent,
-    ProductComponent
+    ProductComponent,
+    GestureComponent,
+    AboutComponent,
+    // AppNavbarComponent
 
   ],
   imports: [

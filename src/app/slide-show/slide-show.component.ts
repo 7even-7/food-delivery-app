@@ -1,5 +1,7 @@
 import { Component, OnInit, Input } from '@angular/core';
-import { Routes } from '@angular/router';
+import { Router, Routes } from '@angular/router';
+import { PredictionEvent } from '../prediction-event';
+
 interface carouselImage{
   src: string;
   alt: string;
@@ -12,6 +14,7 @@ interface carouselImage{
 export class SlideShowComponent implements OnInit{
 
   public selectedIndex:number = 0;
+  gesture:String = "";
   @Input() controls = true;
   @Input() autoSlide = false;
   @Input() images:carouselImage[] = [
@@ -23,8 +26,7 @@ export class SlideShowComponent implements OnInit{
   //data:string = this.images[0].src;
   //select a slide
 
-  //spread -> stage 4, liver brain lung, biopsy-> at least stage 3
-  
+  constructor(private router: Router){}
   //go to next slide
   goPrev():void {
     if (this.selectedIndex === 0){
@@ -43,12 +45,10 @@ export class SlideShowComponent implements OnInit{
         this.selectedIndex++;
       }
     }
-
-  constructor () {}
   ngOnInit(): void {
-    if (this.autoSlide){
-      this.autoSlideImages();
-    }
+    // if (this.autoSlide){
+    //   this.autoSlideImages();
+    // }
   }
 
   autoSlideImages():void{
@@ -56,5 +56,34 @@ export class SlideShowComponent implements OnInit{
       this.goNext();
     }, 2000);
   }
-  
+  prediction(event: PredictionEvent){
+    this.gesture = event.getPrediction();
+    this.handleGesture(this.gesture);
+    
+  }
+
+  handleGesture(gest:String ):void{
+    //slide go next
+    if (gest.includes("Hand Pointing")){
+      this.goNext();
+    }
+
+    else if (gest.includes("Two Hand Pointing")){
+      this.goPrev();
+    }
+
+    if (gest.includes("Hand Pinching")){
+      this.router.navigate(['menu']);
+    }
+    if(gest.includes("Open Hand")){
+      this.router.navigate(['checkout']);
+      
+    }
+    if(gest.includes("Closed Hand")){
+      this.router.navigate(['about']);
+      
+    }
+    
+  }
+
 }

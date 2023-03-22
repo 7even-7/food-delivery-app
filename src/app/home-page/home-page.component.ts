@@ -15,9 +15,7 @@ export class HomePageComponent implements OnInit {
   ngOnInit(): void {
   }
 
-  prediction(event: PredictionEvent){
-    this.gesture = event.getPrediction();
-  }
+
   linkToMenu(){
     this.router.navigate(['menu']);
   }
